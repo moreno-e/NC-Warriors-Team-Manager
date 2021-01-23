@@ -12,9 +12,9 @@ CREATE TABLE `player` (
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
   `team` varchar(5) DEFAULT NULL,
-  `position` varchar DEFAULT NULL;
+  `position` varchar(10) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `phone_number varchar(15) DEFAULT NULL,  
+  `phone_number` varchar(15) DEFAULT NULL,  
   
   
   PRIMARY KEY (`id`)
@@ -26,5 +26,5 @@ CREATE TABLE `player` (
 
 INSERT INTO `player` VALUES 
 	(1,'Eric','Moreno','lower','center','moreno.eric01@gmail.com','919-614-0424'),
-	(2,'Robbie','Walters','lower','left','robbiewalters@test.com','919-999-9999'),
+	(2,'Robbie','Walters','lower','left','robbiewalters@test.com','919-999-9999');
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+		<title>Player Info</title>
+	</head>
+	
+	<body>
+		
+		
+		<div class="container">
+			<h1>Welcome to the Player Info Page</h1>
+			<table class="table  table-hover table-bordered ">
+				<thead class="thead-dark">
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Team</th>
+						<th>Position</th>
+						<th>Email</th>
+						<th>Phone Number</th>		
+						<th>Update/Delete</th>		
+					</tr>
+				</thead>
+				
+				<tbody>
+					<!-- from our list -->
+					<tr th:each="player : ${players}">
+							<td th:text="${player.firstName}" />
+							<td th:text="${player.lastName}" />
+							<td th:text="${player.team}" />
+							<td th:text="${player.position}" />
+							<td th:text="${player.email}" />						
+							<td th:text="${player.phoneNumber}" />
+							<td>
+						<div>						
+							<a
+								th:href="@{/players/showFormForUpdate(playerId=${player.id})}"
+								class="btn btn-info btn-sm"> Update </a>
+						
+
+						
+							<!-- Add "delete" button/link -->
+							<a th:href="@{/players/delete(playerId=${player.id})}"
+								class="btn btn-danger btn-sm"
+								onclick="if (!(confirm('Are you sure you want to delete this player?'))) return false">
+								Delete </a>
+						</div>
+					</td>
+					</tr>
+				</tbody>		
+			</table>
+			<a th:href="@{/players/showFormForAdd}"
+			class="btn btn-primary btn-sm mb-3"> Add Player </a>
+		</div>
+	</body>
+	
+</html>

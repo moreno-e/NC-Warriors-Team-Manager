@@ -1,0 +1,4 @@
+NOTES
+
+wrap table in div to adjust size
+<thead> tag is used to group header content in an HTML table.

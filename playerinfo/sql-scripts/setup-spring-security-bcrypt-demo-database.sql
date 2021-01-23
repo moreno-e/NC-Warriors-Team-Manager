@@ -1,7 +1,7 @@
 DROP DATABASE  IF EXISTS `spring_security_bcrypt`;
 
 CREATE DATABASE  IF NOT EXISTS `spring_security_bcrypt`;
-USE `spring_security_demo_bcrypt`;
+USE `spring_security_bcrypt`;
 
 --
 -- Table structure for table `users`
@@ -27,7 +27,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` 
 VALUES 
-('john','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
+('eric','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
 ('robbie','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
 ('travis','{bcrypt}$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1);
 
@@ -52,7 +52,7 @@ INSERT INTO `authorities`
 VALUES 
 ('eric','ROLE_CAPTAIN'),
 ('robbie','ROLE_PLAYER'),
-('travis','ROLE_PRESIDENT'),
+('travis','ROLE_PRESIDENT');
 
 
 

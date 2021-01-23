@@ -17,10 +17,10 @@ public class Player {
 	private int id;
 	
 	@Column(name="first_name")
-	private String first_name;
+	private String firstName;
 	
 	@Column(name="last_name")
-	private String last_name;
+	private String lastName;
 	
 	@Column(name="team")
 	private String team;
@@ -32,33 +32,39 @@ public class Player {
 	private String email;
 	
 	@Column(name="phone_number")
-	private String phone_number;
+	private String phoneNumber;
 	
 	public Player() {
 		
 	}
+
 	
-	public Player(String first_name, String last_name, String team, String position, String email,
-			String phone_number) {
-		this.first_name = first_name;
-		this.last_name = last_name;
+	
+	public Player(int id, String firstName, String lastName, String team, String position, String email,
+			String phoneNumber) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.team = team;
 		this.position = position;
 		this.email = email;
-		this.phone_number = phone_number;
+		this.phoneNumber = phoneNumber;
 	}
 
-	public Player(int id, String first_name, String last_name, String team, String position, String email,
-			String phone_number) {
-		this.id = id;
-		this.first_name = first_name;
-		this.last_name = last_name;
+	
+
+
+	public Player(String firstName, String lastName, String team, String position, String email, String phoneNumber) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.team = team;
 		this.position = position;
 		this.email = email;
-		this.phone_number = phone_number;
+		this.phoneNumber = phoneNumber;
 	}
-	
+
+
+
 	public int getId() {
 		return id;
 	}
@@ -67,20 +73,20 @@ public class Player {
 		this.id = id;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getTeam() {
@@ -107,13 +113,15 @@ public class Player {
 		this.email = email;
 	}
 
-	public String getPhone_number() {
-		return phone_number;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhone_number(String phone_number) {
-		this.phone_number = phone_number;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
+	
+
 	
 	
 	

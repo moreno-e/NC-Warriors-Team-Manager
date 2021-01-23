@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+		<title>New Player</title>
+	</head>
+	
+	<body>
+		
+		
+		<div class="container">
+			<h3>Enter New Player</h3>
+			<form action="#" th:action="@{/players/save}" th:object="${players}" 
+			method="post" >
+				
+				<label>Personal Info</label>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{firstName}" placeholder="First Name"/>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{lastName}" placeholder="Last Name"/>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{email}" placeholder="Email"/>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{phoneNumber}" placeholder="xxx.xxx.xxx"/>
+				
+				<label>Team Info</label>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{team}" placeholder="Lower / Upper"/>
+				<input class="form-control mb-4 col-4" type="text" th:field="*{position}" placeholder="Forward / Defense"/>
+			
+				<button type="submit" class="btn btn-info col-2">Save Player Info</button>
+			</form>
+		</div>
+	</body>
+</html>
