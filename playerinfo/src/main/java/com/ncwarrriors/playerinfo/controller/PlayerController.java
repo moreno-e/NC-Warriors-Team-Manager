@@ -27,17 +27,30 @@ private PlayerService playerService;
 	public String listPlayers(Model theModel) {				
 		// get Players from db
 		List<Player> thePlayers = playerService.findAll();		
-		// add to the spring model
 		theModel.addAttribute("players", thePlayers);		
 		return "players/playerinfo";
+	}
+	
+	@GetMapping("/upperTeam")
+	public String selectedUpperTeam(Model theModel) {
+		List<Player> thePlayers = playerService.findAll();
+		theModel.addAttribute("players",thePlayers);
+		return "players/upperTeam";
+	}
+	
+	@GetMapping("/lowerTeam")
+	public String selectedLowerTeam(Model theModel) {
+		List<Player> thePlayers = playerService.findAll();
+		theModel.addAttribute("players",thePlayers);
+		return "players/lowerTeam";
 	}
 	
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {		
 		// create model attribute to bind form data
 		Player thePlayer = new Player();		
-		theModel.addAttribute("players", thePlayer);		
-		return "players/new-player-form";
+		theModel.addAttribute("player", thePlayer);		
+		return "players/player-form";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -46,7 +59,7 @@ private PlayerService playerService;
 		Player thePlayer = playerService.findById(theId);
 		
 		// set the Player as a model attribute to pre-populate the form
-		theModel.addAttribute("players", thePlayer);
+		theModel.addAttribute("player", thePlayer);
 		
 		// send over to our form
 		return "players/player-form";

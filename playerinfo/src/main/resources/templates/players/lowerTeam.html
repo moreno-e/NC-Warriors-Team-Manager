@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+		<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+	
+<title>Insert title here</title>
+</head>
+
+<body>
+		<div class="container">
+			<h2>Current Lower N.C. Warriors Team Members</h2>
+			<table  class="table  table-hover table-bordered ">
+				<thead class="table-danger">
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Position</th>								
+						</tr>
+				</thead>
+			<tbody>			
+				<tr th:each="player : ${players}" th:if="${player.team} == lower"> 
+					<td  th:text="${player.firstName}"> 
+					<td  th:text="${player.LastName}"> 
+					<td  th:text="${player.position}">				
+				</tr>
+			</tbody>
+		</table>
+		
+		 <h3>WCC Lower C Warriors Team</h3>
+		 <table  class="table  table-hover table-bordered ">
+				<thead class="table-secondary">
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Position</th>								
+						</tr>
+				</thead>
+			<tbody>			
+				<tr th:each="player : ${players}"  th:if="${player.leagueTeam} == 'Lower C'"> 
+					<td  th:text="${player.firstName}"> 
+					<td  th:text="${player.LastName}"> 
+					<td  th:text="${player.position}">				
+				</tr>
+			</tbody>
+		</table>
+
+	</div>			
+</body>
+</html>

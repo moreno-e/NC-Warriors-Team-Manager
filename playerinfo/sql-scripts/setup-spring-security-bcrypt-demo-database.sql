@@ -50,9 +50,12 @@ CREATE TABLE `authorities` (
 
 INSERT INTO `authorities` 
 VALUES 
+('travis','ROLE_BOARD'),
 ('eric','ROLE_CAPTAIN'),
+('eric','ROLE_PLAYER'),
 ('robbie','ROLE_PLAYER'),
-('travis','ROLE_PRESIDENT');
+
+('travis','ROLE_PLAYER');
 
 
 

@@ -15,6 +15,7 @@ CREATE TABLE `player` (
   `position` varchar(10) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `phone_number` varchar(15) DEFAULT NULL,  
+  `league_team` varchar(15) DEFAULT NULL,  
   
   
   PRIMARY KEY (`id`)
@@ -25,6 +26,8 @@ CREATE TABLE `player` (
 --
 
 INSERT INTO `player` VALUES 
-	(1,'Eric','Moreno','lower','center','moreno.eric01@gmail.com','919-614-0424'),
-	(2,'Robbie','Walters','lower','left','robbiewalters@test.com','919-999-9999');
+	(1,'Eric','Moreno','lower','center','moreno.eric01@gmail.com','919-614-0424', 'Lower C'),
+	(2,'Robbie','Walters','lower','left','robbiewalters@test.com','919-999-9999', 'Lower C');
+    
+    
 

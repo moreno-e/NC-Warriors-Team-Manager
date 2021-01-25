@@ -14,9 +14,12 @@
 		
 		
 		<div class="container">
-			<h3>Enter New Player</h3>
-			<form action="#" th:action="@{/players/save}" th:object="${players}" 
+			<h3>Player Information Form</h3>
+			<form action="#" th:action="@{/players/save}" th:object="${player}" 
 			method="post" >
+			
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
 				
 				<label>Personal Info</label>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{firstName}" placeholder="First Name"/>
@@ -28,6 +31,15 @@
 				<input class="form-control mb-4 col-4" type="text" th:field="*{team}" placeholder="Lower / Upper"/>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{position}" placeholder="Forward / Defense"/>
 			
+				<label>Currently on Warriors League Team?</label>	
+				<br>
+				<select class="form-select form-select-sm mb-4 col-4" th:field="*{leagueTeam}">
+					  <option value="none">none</option>
+					  <option value="Lower C">Lower C</option>
+					  <option value="Intermediate C">Intermediate C</option>				
+				</select>
+				<br>
+				
 				<button type="submit" class="btn btn-info col-2">Save Player Info</button>
 			</form>
 		</div>

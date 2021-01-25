@@ -8,4 +8,6 @@ public interface PlayerRepository extends JpaRepository<Player, Integer>{
 
 	public List<Player> findAllByOrderByLastNameAsc();
 	
+	public List<Player> findByTeam(String theTeam);
+	
 }

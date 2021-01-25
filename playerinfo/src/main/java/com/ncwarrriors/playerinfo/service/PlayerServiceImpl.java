@@ -24,6 +24,11 @@ public class PlayerServiceImpl implements PlayerService {
 		// TODO Auto-generated method stub
 		return playerRepository.findAllByOrderByLastNameAsc();
 	}
+	
+	public List<Player> findByTeam(String theTeam){
+		
+		return playerRepository.findByTeam(theTeam);
+	}
 
 
 	public Player findById(int theId) {

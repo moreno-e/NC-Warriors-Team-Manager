@@ -1,5 +1,7 @@
 package com.ncwarrriors.playerinfo.entity;
 
+import javax.validation.constraints.Pattern;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,14 +36,15 @@ public class Player {
 	@Column(name="phone_number")
 	private String phoneNumber;
 	
+	@Column(name="league_team")
+	private String leagueTeam;
+	
 	public Player() {
 		
 	}
 
-	
-	
 	public Player(int id, String firstName, String lastName, String team, String position, String email,
-			String phoneNumber) {
+			String phoneNumber,String leagueTeam) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -49,21 +52,18 @@ public class Player {
 		this.position = position;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.leagueTeam = leagueTeam;
 	}
 
-	
-
-
-	public Player(String firstName, String lastName, String team, String position, String email, String phoneNumber) {
+	public Player(String firstName, String lastName, String team, String position, String email, String phoneNumber, String leagueTeam) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.team = team;
 		this.position = position;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.leagueTeam = leagueTeam;
 	}
-
-
 
 	public int getId() {
 		return id;
@@ -121,6 +121,13 @@ public class Player {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	public String getLeagueTeam() {
+		return leagueTeam;
+	}
+
+	public void setLeagueTeam(String leagueTeam) {
+		this.leagueTeam = leagueTeam;
+	}
 
 	
 	
