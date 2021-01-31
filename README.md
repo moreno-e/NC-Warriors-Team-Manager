@@ -42,5 +42,6 @@ The Team Manager application allows for the team manager to manage the current p
 - Thymeleaf
 - Bootstrap
 
-
+## What app looks like
+![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_HomePage.png)
 
