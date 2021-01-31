@@ -50,5 +50,5 @@ Update Player (Add Player is same except empty fields)
 ![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_UpdatePlayer.png)
 
 Selected Lower Team view, along with those who play on a league team
-![alt text]()
+![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_LowerTeam1.png)
 
