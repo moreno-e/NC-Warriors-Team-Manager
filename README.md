@@ -46,4 +46,9 @@ The Team Manager application allows for the team manager to manage the current p
 Home Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_HomePage.png)
 
+Update Player (Add Player is same except empty fields)
+![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_UpdatePlayer.png)
+
+Selected Lower Team view, along with those who play on a league team
+![alt text](https://github.com/moreno-e/NC-Warriors-Team-Manager/blob/main/Screenshot_LowerTeam.png)
 
