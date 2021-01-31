@@ -21,25 +21,86 @@
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" th:field="*{id}" />
 				
-				<label>Personal Info</label>
+				<label class="col-form-label-lg">Personal Information</label>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{firstName}" placeholder="First Name"/>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{lastName}" placeholder="Last Name"/>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{email}" placeholder="Email"/>
 				<input class="form-control mb-4 col-4" type="text" th:field="*{phoneNumber}" placeholder="xxx.xxx.xxx"/>
 				
-				<label>Team Info</label>
-				<input class="form-control mb-4 col-4" type="text" th:field="*{team}" placeholder="Lower / Upper"/>
-				<input class="form-control mb-4 col-4" type="text" th:field="*{position}" placeholder="Forward / Defense"/>
-			
+				<label class="col-form-label-lg" >Team Information</label>
+				<h6>Current Team</h6>			
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="upper" id="upper"  value="upper" th:field="*{team}">
+						<label class="form-check-label" >
+						    Upper
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="lower" id="lower" value="lower" th:field="*{team}">
+						<label class="form-check-label">
+						    Lower
+						</label>
+					</div>
+															
+					<br></br>
+					
+					<h6>Preferred Position</h6>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="forward" id="forward"  value="forward" th:field="*{position}">
+						<label class="form-check-label" >
+						    Forward
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="defense" id="defense" value="defense" th:field="*{position}">
+						<label class="form-check-label" >
+						    Defense
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="goalie" id="goalie" value="goalie" th:field="*{position}">
+						<label class="form-check-label" >
+						    Goalie
+						</label>
+					</div>
+					
+				<br></br>
+				
 				<label>Currently on Warriors League Team?</label>	
 				<br>
-				<select class="form-select form-select-sm mb-4 col-4" th:field="*{leagueTeam}">
-					  <option value="none">none</option>
-					  <option value="Lower C">Lower C</option>
-					  <option value="Intermediate C">Intermediate C</option>				
-				</select>
-				<br>
+				<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="none" id="none"  value="none" th:field="*{leagueTeam}">
+						<label class="form-check-label" >
+						    None or Other Team
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input " type="radio" name="Lower C" id="Lower C" value="Lower C" th:field="*{leagueTeam}">
+						<label class="form-check-label" >
+						    Lower C
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="Intermediate C" id="Intermediate C" value="Intermediate C" th:field="*{leagueTeam}">
+						<label class="form-check-label" >
+						    Intermediate C
+						</label>
+					</div>
+					
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="Both" id="Both" value="Both" th:field="*{leagueTeam}">
+						<label class="form-check-label" >
+						    Both
+						</label>
+					</div>
+					
 				
+				<br></br>
 				<button type="submit" class="btn btn-info col-2">Save Player Info</button>
 			</form>
 		</div>
