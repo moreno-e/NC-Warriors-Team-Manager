@@ -39,6 +39,7 @@ The Team Manager application allows for the team manager to manage the current p
   - Devtool
   - Data JPA
 - MySql
+- Hibernate
 - Thymeleaf
 - Bootstrap
 
